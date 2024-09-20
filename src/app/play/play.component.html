@@ -1,0 +1,25 @@
+<div *ngIf="query['amount']" class="">
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <h3 class="poppins-bold">Category:</h3>
+            <p>{{ quiz.name }}</p>
+        </div>
+        <a [routerLink]="['']"><button class="custom-button">Cancel quiz</button></a>
+    </div>
+    <div *ngFor="let question of quiz.questions, let i = index">
+        <div class="question-form">
+            <h4 class="poppins-bold">Question {{ i + 1 }}: <span [innerHTML]="getHtml(question.question)"></span></h4>
+            <form [formGroup]="form">
+                <div *ngFor="let answer of question.answers">
+                    <input type="radio" name="answer" [id]="answer" [value]="answer" formControlName="answer" (ngModelChange)="onChange(i)">
+                    <span [innerHTML]="getHtml(answer)"></span>
+                </div>
+            </form>
+        </div>
+        <div class="dividers">
+            <div class="divider-start"></div>
+            <!-- <div class="divider-end"></div> -->
+        </div>
+    </div>
+    <a [routerLink]="['results']" [state]="{quiz_results: quiz, timeStarted: timeStarted, timeEnded: timeEnded}"><button (click)="onClick()">End quiz</button></a>
+</div>

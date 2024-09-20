@@ -1,0 +1,37 @@
+.header {
+    margin: 0;
+    padding: 16px 35px;
+    background-color: black;
+    color: #f6b26b;
+}
+
+.grad {
+    height: 25px;
+    background-image: linear-gradient(to right, #e687a9, #ed9d3d);
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    color: #f6b26b;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }

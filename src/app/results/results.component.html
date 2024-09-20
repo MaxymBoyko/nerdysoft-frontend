@@ -1,0 +1,10 @@
+<div class="quiz-results">
+    <h2>Results</h2>
+    <p>Correct answers {{ quizScore }} out of {{ quizResults.questions.length }}</p>
+    <p>Time taken: {{ timeTaken }}</p>
+    <div *ngFor="let question of quizResults.questions, let i = index">
+        <h4>Question {{ i + 1 }}: <span [innerHTML]="getHtml(question.question)"></span></h4>
+        <p>Your answer: <span [innerHTML]="getHtml(question.selected_answer)"></span></p>
+        <p>Correct answer: <span [innerHTML]="getHtml(question.correct_answer)"></span></p>
+    </div>
+</div>
