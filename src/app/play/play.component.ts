@@ -44,9 +44,8 @@ export class PlayComponent implements OnInit {
     return true;
   }
 
-  onClick(): void {
+  endQuiz(): void {
     this.timeEnded = new Date;
-    console.log(this.timeEnded)
   }
 
   ngOnInit(): void {

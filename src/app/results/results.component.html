@@ -1,10 +1,21 @@
 <div class="quiz-results">
-    <h2>Results</h2>
-    <p>Correct answers {{ quizScore }} out of {{ quizResults.questions.length }}</p>
-    <p>Time taken: {{ timeTaken }}</p>
+    <div class="header">
+        <div class="header--name">
+            <h2>Results</h2>
+        </div>
+        <div class="header--info">
+            <p>Correct answers {{ quizScore }} out of {{ quizResults.questions.length }}</p>
+            <p>Time taken: {{ timeTaken }}</p>
+        </div>
+    </div>    
     <div *ngFor="let question of quizResults.questions, let i = index">
-        <h4>Question {{ i + 1 }}: <span [innerHTML]="getHtml(question.question)"></span></h4>
-        <p>Your answer: <span [innerHTML]="getHtml(question.selected_answer)"></span></p>
-        <p>Correct answer: <span [innerHTML]="getHtml(question.correct_answer)"></span></p>
+        <div class="question-results">
+            <h4 class="question-results--title open-sans">Question {{ i + 1 }}: <span class="question-results--question" [innerHTML]="getHtml(question.question)"></span></h4>
+            <p>Your answer: <span [innerHTML]="getHtml(question.selected_answer)"></span></p>
+            <p>Correct answer: <span [innerHTML]="getHtml(question.correct_answer)"></span></p>
+        </div>
+        <div class="dividers">
+            <div class="divider--start"></div>
+        </div>
     </div>
 </div>

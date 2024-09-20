@@ -7,6 +7,11 @@
     font-size: 20px;
 }
 
+.header--info {
+    display: flex;
+    align-items: center;
+}
+
 .custom-button {
     background-color: #f77d37;
     color: #f4f4f4;
@@ -17,7 +22,7 @@
     font-weight: 500;
     font-style: normal;
     background-image: linear-gradient(to bottom right, #e787aa, #ed9d3d);
-  }
+}
   
 .custom-button:hover {
   background-color: #ff8c4a;
@@ -26,6 +31,13 @@
 .poppins-bold {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
+    font-style: normal;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -47,19 +59,28 @@ p {
     padding-bottom: 16px;
 }
 
+.question-form--title {
+    color: #bf799e;
+}
+
 .dividers {
     display: flex;
     justify-content: space-between;
 }
 
-.divider-start {
+.divider--start {
     width: 25%;
     height: 10px;
     background-image: linear-gradient(to bottom right, #e787aa, #ed9d3d);
 }
 
-.divider-end {
+.divider--end {
     width: 15%;
     height: 10px;
     background-image: linear-gradient(to bottom right, #e787aa, #ed9d3d);    
+}
+
+.finish-button {
+    display: flex;
+    justify-content: center;
 }
